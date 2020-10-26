@@ -11,12 +11,12 @@ const App = () => {
     axios
       .get(`https://rickandmortyapi.com/api/character`)
       .then(response => {
-        console.log(response.data.results);
+        console.log(response);
         setCharacter(response.data.results)
     })
     .catch(error => {
       console.log('the data was not returned', error)
-    })
+    });
   }, [])
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should

@@ -1,17 +1,21 @@
 // Write your Character component here
 
 import React from 'react';
-// import 
+import { Cards, Img } from './CardStyle'
 
 const CharacterCard = (props) => {
-  const { name, image } = props.character
+  const { name, image, species, status } = props.character
    
   return (
-    <div>
+    
+    <Cards>
       <h1>{name}</h1>
-      <img src={image} />
-    </div>
-  )
+      <h2>Species: {species}</h2>
+      <p>Status: {status}</p>
+      <Img src={image} />
+    </Cards>
+
+  );
 }
 
 export default CharacterCard;
