@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-import CharacterCard from './components/Character'
+import CharacterCard from './components/CharacterCard'
 
 const App = () => {
   const [character, setCharacter] = useState([])
@@ -11,7 +11,7 @@ const App = () => {
     axios
       .get(`https://rickandmortyapi.com/api/character`)
       .then(response => {
-        console.log(response);
+        console.log(response); //shape of the data
         setCharacter(response.data.results)
     })
     .catch(error => {

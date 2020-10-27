@@ -4,7 +4,8 @@ import React from 'react';
 import { Cards, Img } from './CardStyle'
 
 const CharacterCard = (props) => {
-  const { name, image, species, status } = props.character
+  const { name, image, species, status } = props.character 
+  //deconstructing props
    
   return (
     
